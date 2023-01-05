@@ -1,0 +1,57 @@
+/* Css for homepage */
+
+body{
+    background-image: url('../assests/layered-waves.svg');
+    background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center; /* Center the image */
+  background-size: cover; /* Scale the image to cover the entire element */
+  min-height: 100%;
+  background-attachment: fixed; /* Fix the image in place */
+}
+.container {
+    display: block;
+    height: auto;
+    margin-top: 6vw;
+    width: 40vw;
+    margin-left: 28vw;
+    background-color: #F9B5AC;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+    opacity: 0.9;
+    
+  }
+  
+  #item-list {
+    overflow-y: scroll;
+    max-height: 500px;
+    min-height: 50px;
+  }
+  #item-list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .fvrt-link {
+    display: inline-block;
+   
+  }
+
+/* For favourite button */
+.button {
+    background-color: Crimson;  
+    border-radius: 5px;
+    color: white;
+    padding: .5em;
+    text-decoration: none;
+    display: inherit;
+    margin: 5px;
+    width: 10vw;
+    
+    
+  }
+  
+  .button:focus,
+  .button:hover {
+    background-color: FireBrick;
+    color: White;
+  }

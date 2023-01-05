@@ -1,0 +1,101 @@
+body {
+  background-image: url("../assests/layered-waves.svg");
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center; /* Center the image */
+  background-size: cover; /* Scale the image to cover the entire element */
+  background-attachment: fixed; /* Fix the image in place */
+}
+.nav {
+  display: flex; /* align items in one line */
+  justify-content: center; /* center the items within the nav container */
+  padding: 5px;
+}
+
+.title {
+  text-align: center; /* center the text */
+  font-weight: bold; /* make the text bold */
+  color: white;
+ 
+  font-size: xxx-large;
+  margin: 0 auto;
+}
+button {
+  align-self: flex-start; /* position the button on the left */
+  background-color: #ea4c89;
+  border-radius: 8px;
+  border-style: none;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  height: 48px;
+  padding: 16px 16px;
+  position: relative;
+  text-align: center;
+
+}
+
+button:hover,
+button:focus {
+  background-color: #F082AC;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* allow items to wrap to the next line */
+}
+
+.Cards {
+  width: 25%; /* set the width of each card to 25% of the container */
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  margin-bottom: 10px;
+}
+
+.Cards img {
+  width: 90%; /* set the width of the image to 100% of the card */
+  border-radius: 10px 10px 0 0; /* top left and top right radius */
+}
+
+.Cards p {
+  margin: 0; /* reset default margin */
+  margin-top: 8px; /* add space between image and paragraph */
+  width: 75%;
+}
+
+.info {
+  width: 90%;
+  border-radius: 0 0 10px 10px; /* bottom left and bottom right radius */
+  background-color: #f7f9f9;
+  text-align: center;
+  padding-bottom: 2px;
+}
+.info .remove {
+    float: right;
+    width: 2em;
+    height: auto;
+    padding: 5px;
+    margin-top: -2.8em;
+  }
+  
+ 
+  
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column; /* stack items vertically */
+  }
+
+  .Cards {
+    width: 100%; /* set the width of each card to 100% of the container */
+  }
+
+  .Cards img {
+    width: 100%; /* set the width of the image to 100% of the card */
+  }
+
+  .info {
+    width: 100%;
+  }
+}
