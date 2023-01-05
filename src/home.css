@@ -7,12 +7,13 @@ body{
   background-size: cover; /* Scale the image to cover the entire element */
   min-height: 100%;
   background-attachment: fixed; /* Fix the image in place */
+  
 }
 .container {
     display: block;
     height: auto;
     margin-top: 6vw;
-    width: 40vw;
+    width: 45vw;
     margin-left: 28vw;
     background-color: #F9B5AC;
     text-align: center;
@@ -38,12 +39,12 @@ body{
 
 /* For favourite button */
 .button {
-    background-color: Crimson;  
+    background-color: #E34C67;  
     border-radius: 5px;
     color: white;
     padding: .5em;
     text-decoration: none;
-    display: inherit;
+    
     margin: 5px;
     width: 10vw;
     
@@ -54,4 +55,69 @@ body{
   .button:hover {
     background-color: FireBrick;
     color: White;
+  }
+
+  #item-list {
+    display: flex; /* use flex layout */
+    flex-wrap: wrap; /* allow child elements to wrap onto new lines if they don't fit on the same line */
+  }
+  
+  .meal-div {
+    width: 70%; /* take up 70% of the available width */
+  }
+  
+
+  
+  
+
+  .search-form {
+    border: none; /* remove any border that may be applied by default */
+  border-bottom: 2px solid #000; /* add a bottom border */
+  
+  border-radius: 0; /* remove rounded corners */
+  background-color: #F9B5AC;
+    height: 5vh;
+    width: 25vw;
+    color: #001220;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .search-form:focus {
+    outline: none;
+    
+  }
+
+  .search-form::placeholder {
+    color: #E34C67; /* Change the color to red */
+    font-weight: bold;
+    padding-left: 12px;
+  }
+  
+  @media (width < 550px){
+    body{
+      margin: unset;
+    }
+    .container{
+      width: 100%;
+      margin: unset;
+      border-radius: unset;
+
+    }
+    .button{
+      width: unset;
+      width: min-content;
+    padding: 10px;
+    font-size: initial;
+    }
+
+    .search-form{
+      width: unset;
+    }
+
+    .search-form::placeholder {
+      color: #E34C67; /* Change the color to red */
+      font-size: small;
+    }
   }

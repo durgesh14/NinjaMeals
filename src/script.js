@@ -1,4 +1,8 @@
 function searchFunction() {
+
+// Get the element where the meals will be displayed
+var itemsdiv = document.getElementById("item-list");
+
   // Get the value of the search field
   var searchValue = document.getElementById("search").value;
   // console.log( document.querySelector(".meal"));
@@ -8,6 +12,11 @@ function searchFunction() {
     var div = document.querySelector(".meal"); // Get the div element
     var parent = div.parentNode; // Get the parent element of the div
     parent.removeChild(div);
+  }
+// To remove the results when nothing is present in input field
+  if(searchValue.length == 0){
+    // itemsdiv.style.visibility = "hidden";
+    itemsdiv.removeChild(div);
   }
 
   // The fetch() function returns a Promise that resolves with the response from the server
@@ -27,8 +36,7 @@ function searchFunction() {
     } else {
       //If meal is found
 
-      // Get the element where the meals will be displayed
-      const itemsdiv = document.getElementById("item-list");
+      
 
 
 
@@ -38,8 +46,8 @@ function searchFunction() {
         const food = document.createElement("div");
         const favourite = document.createElement("button");
 
-        food.className = "meal"; // Add a class name to the div element
-        favourite.className = "meal fvrt-btn";
+        food.className = "meal meal-div"; // Add a class name to the div element
+        favourite.className = "meal fvrt-btn button";
 
         const foodName = `<h3>${meal.strMeal}</h3>`; // Create the HTML content for the meal
         food.innerHTML = foodName; // Set the inner HTML of the div element to the HTML content
