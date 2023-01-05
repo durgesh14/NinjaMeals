@@ -7,7 +7,22 @@ body{
   background-size: cover; /* Scale the image to cover the entire element */
   min-height: 100%;
   background-attachment: fixed; /* Fix the image in place */
+  font-family: Sanskrit Text;
   
+}
+.nav {
+  display: flex; /* align items in one line */
+  justify-content: center; /* center the items within the nav container */
+  padding: 5px;
+}
+
+.title {
+  text-align: center; /* center the text */
+  font-weight: bold; /* make the text bold */
+  color: white;
+ 
+  font-size: xxx-large;
+  margin: 0 auto;
 }
 .container {
     display: block;
@@ -98,6 +113,7 @@ body{
   @media (width < 550px){
     body{
       margin: unset;
+      font-family: Sanskrit Text;
     }
     .container{
       width: 100%;

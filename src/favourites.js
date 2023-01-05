@@ -61,6 +61,12 @@ const showContent = (data) => {
   remove.addEventListener('click', function(){
     localStorage.removeItem(data.meals[0].idMeal);
     card.remove();
-  })
+  });
+
+
+  //Event listner on the meal image
+  img.addEventListener('click', function(){
+    window.location.href = './detailsPage.html?id='+data.meals[0].idMeal;
+  });
   
 };

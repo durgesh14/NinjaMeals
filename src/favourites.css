@@ -4,6 +4,7 @@ body {
   background-position: center; /* Center the image */
   background-size: cover; /* Scale the image to cover the entire element */
   background-attachment: fixed; /* Fix the image in place */
+  font-family: Sanskrit Text;
 }
 .nav {
   display: flex; /* align items in one line */
@@ -29,9 +30,10 @@ button {
   font-size: 18px;
   font-weight: bold;
   height: 48px;
-  padding: 16px 16px;
+  padding: 12px 12px;
   position: relative;
   text-align: center;
+  font-family: Sanskrit Text;
 
 }
 
