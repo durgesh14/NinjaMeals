@@ -1,5 +1,5 @@
 body {
-  background-image: url("../assests/layered-waves.svg");
+  background-image: url("../../assests/layered-waves.svg");
   background-repeat: no-repeat; /* Do not repeat the image */
   background-position: center; /* Center the image */
   background-size: cover; /* Scale the image to cover the entire element */
