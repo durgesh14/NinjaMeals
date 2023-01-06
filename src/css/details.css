@@ -47,6 +47,7 @@ font-family: Sanskrit Text;
     font-size: larger;
     padding: 5px;
   }
+ 
   
   p::first-letter {
     font-size: 2em;
@@ -121,4 +122,21 @@ font-family: Sanskrit Text;
       margin-top: 5px;
       border-radius: 25px 25px 25px 25px;
     }
+
+    .title{
+      margin-top: 6vh;
+    font-size: large;
+    margin-left: -60px;
+    width: fit-content
+    }
+    button{
+      font-size: unset;
+      padding: 5px;
+      height: unset;
+    }
+
+
+    
   }
+
+  
