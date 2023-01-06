@@ -1,14 +1,15 @@
 /* Css for homepage */
-
-body{
-    background-image: url('../../assests/layered-waves.svg');
-    background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: center; /* Center the image */
-  background-size: cover; /* Scale the image to cover the entire element */
+/* Sets the background image of the body element to a file called "layered-waves.svg"
+The image will not repeat, will be centered, cover the entire element, and be fixed in place
+Sets the font-family of the body element to "Sanskrit Text" */
+body {
+  background-image: url("../../assests/layered-waves.svg");
+  background-repeat: no-repeat; 
+  background-position: center; 
+  background-size: cover; 
   min-height: 100%;
-  background-attachment: fixed; /* Fix the image in place */
+  background-attachment: fixed; 
   font-family: Sanskrit Text;
-  
 }
 .nav {
   display: flex; /* align items in one line */
@@ -20,120 +21,110 @@ body{
   text-align: center; /* center the text */
   font-weight: bold; /* make the text bold */
   color: white;
- 
+
   font-size: xxx-large;
   margin: 0 auto;
 }
 .container {
-    display: block;
-    height: auto;
-    margin-top: 6vw;
-    width: 45vw;
-    margin-left: 28vw;
-    background-color: #F9B5AC;
-    text-align: center;
-    padding: 10px;
-    border-radius: 50px;
-    opacity: 0.9;
-    
-  }
-  
-  #item-list {
-    overflow-y: scroll;
-    max-height: 500px;
-    min-height: 50px;
-  }
-  #item-list::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .fvrt-link {
-    display: inline-block;
-   
-  }
+  display: block;
+  height: auto;
+  margin-top: 6vw;
+  width: 45vw;
+  margin-left: 28vw;
+  background-color: #f9b5ac;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50px;
+  opacity: 0.9;
+}
+
+#item-list {
+  overflow-y: scroll;
+  max-height: 500px;
+  min-height: 50px;
+}
+#item-list::-webkit-scrollbar {
+  display: none;
+}
+
+.fvrt-link {
+  display: inline-block;
+}
 
 /* For favourite button */
 .button {
-    background-color: #E34C67;  
-    border-radius: 5px;
-    color: white;
-    padding: .5em;
-    text-decoration: none;
-    
-    margin: 5px;
-    width: 10vw;
-    
-    
-  }
-  
-  .button:focus,
-  .button:hover {
-    background-color: FireBrick;
-    color: White;
-  }
+  background-color: #e34c67;
+  border-radius: 5px;
+  color: white;
+  padding: 0.5em;
+  text-decoration: none;
 
-  #item-list {
-    display: flex; /* use flex layout */
-    flex-wrap: wrap; /* allow child elements to wrap onto new lines if they don't fit on the same line */
-  }
-  
-  .meal-div {
-    width: 70%; /* take up 70% of the available width */
-  }
-  
+  margin: 5px;
+  width: 10vw;
+}
 
-  
-  
+.button:focus,
+.button:hover {
+  background-color: FireBrick;
+  color: White;
+}
+
+#item-list {
+  display: flex; /* use flex layout */
+  flex-wrap: wrap; /* allow child elements to wrap onto new lines if they don't fit on the same line */
+}
+
+.meal-div {
+  width: 70%; /* take up 70% of the available width */
+}
+
+.search-form {
+  border: none; /* remove any border that may be applied by default */
+  border-bottom: 2px solid #000; /* add a bottom border */
+
+  border-radius: 0; /* remove rounded corners */
+  background-color: #f9b5ac;
+  height: 5vh;
+  width: 25vw;
+  color: #001220;
+  font-size: medium;
+  font-weight: bold;
+  text-align: center;
+}
+
+.search-form:focus {
+  outline: none;
+}
+
+.search-form::placeholder {
+  color: #e34c67; /* Change the color to red */
+  font-weight: bold;
+  padding-left: 12px;
+}
+
+@media (width < 550px) {
+  body {
+    margin: unset;
+    font-family: Sanskrit Text;
+  }
+  .container {
+    width: 100%;
+    margin: unset;
+    border-radius: unset;
+  }
+  .button {
+    width: unset;
+    width: min-content;
+    padding: 10px;
+    font-size: initial;
+  }
 
   .search-form {
-    border: none; /* remove any border that may be applied by default */
-  border-bottom: 2px solid #000; /* add a bottom border */
-  
-  border-radius: 0; /* remove rounded corners */
-  background-color: #F9B5AC;
-    height: 5vh;
-    width: 25vw;
-    color: #001220;
-    font-size: medium;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  .search-form:focus {
-    outline: none;
-    
+    width: unset;
   }
 
   .search-form::placeholder {
-    color: #E34C67; /* Change the color to red */
-    font-weight: bold;
-    padding-left: 12px;
+    color: #e34c67; /* Change the color to red */
+    font-size: small;
   }
-  
-  @media (width < 550px){
-    body{
-      margin: unset;
-      font-family: Sanskrit Text;
-    }
-    .container{
-      width: 100%;
-      margin: unset;
-      border-radius: unset;
-
-    }
-    .button{
-      width: unset;
-      width: min-content;
-    padding: 10px;
-    font-size: initial;
-    }
-
-    .search-form{
-      width: unset;
-    }
-
-    .search-form::placeholder {
-      color: #E34C67; /* Change the color to red */
-      font-size: small;
-    }
-  }
+}
