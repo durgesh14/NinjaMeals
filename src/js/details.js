@@ -59,7 +59,6 @@ const showDetails = (data) => {
 
     
   }
-  console.log(ingPlusMeasure);;
 
   
  
@@ -85,7 +84,9 @@ const showDetails = (data) => {
 
 // Create a p element
   var instructions = document.createElement("p");
-  instructions.innerHTML = "<strong>Instructions </strong>: "+instructionsData;
+  
+  instructionsData = instructionsData.split('. ').join('.<br>');
+  instructions.innerHTML = "<strong>Instructions </strong>: <br> "+instructionsData;
 
 
  // Create a p element
