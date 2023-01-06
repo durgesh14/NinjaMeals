@@ -1,142 +1,136 @@
-body{
-  background-image: url('../../assests/layered-waves.svg');
-  background-repeat: no-repeat; /* Do not repeat the image */
-background-position: center; /* Center the image */
-background-size: cover; /* Scale the image to cover the entire element */
-min-height: 100%;
-background-attachment: fixed; /* Fix the image in place */
-color: #FFFFFF;
-font-family: Sanskrit Text;
-
+/* Sets the background image of the body element to a file called "layered-waves.svg"
+The image will not repeat, will be centered, cover the entire element, and be fixed in place
+Sets the font-family of the body element to "Sanskrit Text" */
+body {
+  background-image: url("../../assests/layered-waves.svg");
+  background-repeat: no-repeat; 
+  background-position: center; 
+  background-size: cover; 
+  min-height: 100%;
+  background-attachment: fixed; 
+  color: #ffffff;
+  font-family: Sanskrit Text;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap; /* allows the child elements to wrap onto a new line if they don't fit on the same line */
-  }
-  
+  display: flex;
+  flex-wrap: wrap; /* allows the child elements to wrap onto a new line if they don't fit on the same line */
+}
+
+.img-div {
+  width: 30%; /* takes up 30% of the available width */
+}
+.img-div img {
+  width: 100%;
+  height: auto;
+  border-radius: 30px 0 30px 0;
+}
+
+.short-desc {
+  width: 70%; /* takes up 70% of the available width */
+}
+.short-desc p {
+  margin-left: 10em;
+
+  font-size: medium;
+}
+/* Changing link color */
+a {
+  color: #ea4c89;
+}
+
+.long-desc {
+  width: 100%; /* takes up the full width of the container */
+
+  background-color: #fcfafa;
+  border-radius: 30px 0 30px 0;
+  color: #3f403f;
+  font-size: larger;
+  padding: 5px;
+}
+
+/* Styling the first letter of every paragraph */
+p::first-letter {
+  font-size: 2em;
+  color: #ea4c89;
+  font-weight: bold;
+}
+
+/* nav styling */
+.nav {
+  display: flex; /* align items in one line */
+  justify-content: center; /* center the items within the nav container */
+  padding: 5px;
+}
+/* Styling title */
+.title {
+  text-align: center; /* center the text */
+  font-weight: bold; /* make the text bold */
+  color: white;
+
+  font-size: xxx-large;
+  margin: 0 auto;
+}
+
+/* Styling button */
+button {
+  align-self: flex-start; /* position the button on the left */
+  background-color: #ea4c89;
+  border-radius: 8px;
+  border-style: none;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  height: 48px;
+  padding: 12px 12px;
+  position: relative;
+  text-align: center;
+  font-family: Sanskrit Text;
+}
+
+button:hover {
+  background-color: #f082ac;
+}
+
+/* Media query to style screen sixe < 550px */
+@media (width < 550px) {
   .img-div {
-    width: 30%; /* takes up 25% of the available width */
+    width: 100%; /* takes up 100% of the available width */
   }
+
   .img-div img {
-    width: 100%;
     height: auto;
-    border-radius: 30px 0 30px 0;
+    border-radius: 25px 25px 25px 25px;
   }
-  
+
   .short-desc {
-    width: 70%; /* takes up 75% of the available width */
-    
+    width: fit-content;
+    background-color: #fcfafa;
+    border-radius: 25px 25px 25px 25px;
+    color: #3f403f;
   }
   .short-desc p {
-    margin-left: 10em;
- 
-    font-size: medium;
+    width: 100%;
+    text-align: left;
+    margin-left: unset;
+    padding-left: 5px;
   }
 
-  a {
-    color:#ea4c89;
-  }
-  
   .long-desc {
-    width: 100%; /* takes up the full width of the container */
-    
-    background-color: #FCFAFA;
-    border-radius: 30px 0 30px 0;
-    color: #3F403F;
-    font-size: larger;
-    padding: 5px;
-  }
- 
-  
-  p::first-letter {
-    font-size: 2em;
-    color: #ea4c89;
-    font-weight: bold;
-  }
-   
-  /* nav styling */
-  .nav {
-    display: flex; /* align items in one line */
-    justify-content: center; /* center the items within the nav container */
-    padding: 5px;
-  }
-  
-  .title {
-    text-align: center; /* center the text */
-    font-weight: bold; /* make the text bold */
-    color: white;
-   
-    font-size: xxx-large;
-    margin: 0 auto;
-  }
-  button {
-    align-self: flex-start; /* position the button on the left */
-    background-color: #ea4c89;
-    border-radius: 8px;
-    border-style: none;
-    color: #ffffff;
-    display: inline-block;
-    font-size: 18px;
-    font-weight: bold;
-    height: 48px;
-    padding: 12px 12px;
-    position: relative;
-    text-align: center;
-    font-family: Sanskrit Text;
-  
-  }
-  
-  button:hover{
-    background-color: #F082AC;
-  }
-
-
-  @media (width < 550px){
-    .img-div {
-      width: 100%; /* takes up 25% of the available width */
-      
-    }
-
-    .img-div img {
-      
-      height: auto;
-      border-radius: 25px 25px 25px 25px;
-    }
-    
-    .short-desc {
-     width: fit-content;
-     background-color: #FCFAFA;
+    margin-top: 5px;
     border-radius: 25px 25px 25px 25px;
-    color: #3F403F;
-      
-    }
-    .short-desc p {
-     width: 100%;
-     text-align: left;
-     margin-left: unset;
-     padding-left: 5px;
-    }
+  }
 
-    .long-desc {
-      margin-top: 5px;
-      border-radius: 25px 25px 25px 25px;
-    }
-
-    .title{
-      margin-top: 6vh;
+  .title {
+    margin-top: 6vh;
     font-size: large;
     margin-left: -60px;
-    width: fit-content
-    }
-    button{
-      font-size: unset;
-      padding: 5px;
-      height: unset;
-    }
-
-
-    
+    width: fit-content;
   }
-
-  
+  button {
+    font-size: unset;
+    padding: 5px;
+    height: unset;
+  }
+}

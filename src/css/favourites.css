@@ -1,27 +1,39 @@
+/* Sets the background image of the body element to a file called "layered-waves.svg"
+The image will not repeat, will be centered, cover the entire element, and be fixed in place
+Sets the font-family of the body element to "Sanskrit Text" */
 body {
   background-image: url("../../assests/layered-waves.svg");
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: center; /* Center the image */
-  background-size: cover; /* Scale the image to cover the entire element */
-  background-attachment: fixed; /* Fix the image in place */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   font-family: Sanskrit Text;
 }
+/* 
+Displays the nav element as a flex container and centers its items within the container
+Adds some padding to the nav element */
 .nav {
-  display: flex; /* align items in one line */
-  justify-content: center; /* center the items within the nav container */
+  display: flex;
+  justify-content: center;
   padding: 5px;
 }
 
+/* Styling title */
+/* Centers and makes the text bold and white for the title element
+Makes the font size large and centers the element within its parent */
 .title {
-  text-align: center; /* center the text */
-  font-weight: bold; /* make the text bold */
+  text-align: center;
+  font-weight: bold;
   color: white;
- 
+
   font-size: xxx-large;
   margin: 0 auto;
 }
+
+/* Styles the button element with a pink background color, rounded borders, white text, and a bold font
+ When the button is hovered over or focused on, the background color changes to a lighter pink */
 button {
-  align-self: flex-start; /* position the button on the left */
+  align-self: flex-start;
   background-color: #ea4c89;
   border-radius: 8px;
   border-style: none;
@@ -34,54 +46,59 @@ button {
   position: relative;
   text-align: center;
   font-family: Sanskrit Text;
-
 }
 
 button:hover,
 button:focus {
-  background-color: #F082AC;
+  background-color: #f082ac;
 }
 
+/* Displays the container element as a flex container and allows its items to wrap to the next line */
 .container {
   display: flex;
-  flex-wrap: wrap; /* allow items to wrap to the next line */
+  flex-wrap: wrap;
 }
 
+/* Sets the width of each Cards element to 25% of the container and displays it as a flex container
+ The items within the Cards element will be stacked vertically and some margin will be added to the bottom */
 .Cards {
-  width: 25%; /* set the width of each card to 25% of the container */
+  width: 25%;
   display: flex;
-  flex-direction: column; /* stack items vertically */
+  flex-direction: column;
   margin-bottom: 10px;
 }
 
+/* Sets the width of the image within the Cards element to 90% of the Cards element
+ Adds rounded borders to the top left and top right corners of the image */
 .Cards img {
   width: 90%; /* set the width of the image to 100% of the card */
   border-radius: 10px 10px 0 0; /* top left and top right radius */
 }
 
+/* resets the default margin for the p element and adds some space between the image and paragraph
+Sets the width of the p element to 75% */
 .Cards p {
-  margin: 0; /* reset default margin */
-  margin-top: 8px; /* add space between image and paragraph */
+  margin: 0;
+  margin-top: 8px;
   width: 75%;
 }
 
+/* Sets the width of the info element to 90% and adds rounded borders to the bottom left and bottom right corners
+ Sets the background color, text alignment, and padding for the element */
 .info {
   width: 90%;
-  border-radius: 0 0 10px 10px; /* bottom left and bottom right radius */
+  border-radius: 0 0 10px 10px;
   background-color: #f7f9f9;
   text-align: center;
   padding-bottom: 2px;
 }
 .info .remove {
-    float: right;
-    width: 2em;
-    height: auto;
-    padding: 5px;
-    margin-top: -2.8em;
-  }
-  
- 
-  
+  float: right;
+  width: 2em;
+  height: auto;
+  padding: 5px;
+  margin-top: -2.8em;
+}
 
 @media only screen and (max-width: 600px) {
   .container {
