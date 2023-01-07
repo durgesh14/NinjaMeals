@@ -1,4 +1,4 @@
-function searchFunction() {
+async function searchFunction() {
   // Get the element where the meals will be displayed
   var itemsdiv = document.getElementById("item-list");
 
@@ -15,14 +15,6 @@ function searchFunction() {
   if (searchValue.length == 0) {
     itemsdiv.removeChild(div);
   }
-
-  // The fetch() function returns a Promise that resolves with the response from the server
-  fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=" + searchValue)
-    .then((res) => res.json()) // Convert the response to JSON format
-    .then((data) => searchResults(data)) // Pass the JSON data to the searchResults() function
-    .catch((error) => {
-      console.error(error); // Log the error to the console
-    });
 
   // The searchResults() function takes a list of data(All the meals) and displays them on the page
   const searchResults = (data) => {
@@ -67,14 +59,25 @@ function searchFunction() {
             // Remove the meal from local storage
             localStorage.removeItem(meal.idMeal);
           }
+       
         });
 
         //Event listner on the meal name
         food.addEventListener("click", function () {
           window.location.href = "./detailsPage.html?id=" + meal.idMeal;
         });
-        //});
       });
     }
   };
+
+  try {
+    // The fetch() function returns a Promise that resolves with the response from the server
+    const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchValue}`);
+    // Convert the response to JSON format
+    const data = await res.json();
+    // Pass the JSON data to the searchResults() function
+    searchResults(data);
+  } catch (error) {
+    console.error(error); // Log the error to the console
+  }
 }
